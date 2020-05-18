@@ -1,0 +1,95 @@
+1. Feature selection
+2. Model selection
+
+Regression problem: 
+x1 x2 x3 x4 ... xn --> y
+
+Feature selection 
+x1 x2 --> y
+x1 x2 x3  --> y
+x1 x2 x4 --> y
+
+
+Generalization: Works good on new data
+
+moving average:
+
+1 2 3 2 3 4 5 1 3 4 5 
+window size 2
+1 2 --> 1.5
+2 3 --> 2.5
+3 2 --> 2.5
+
+
+Bias: explain the training data -- training error
+
+variance: generalize the new data  -- test error 
+
+E((y - y-hat)^2)
+
+original target - y
+predicted target - y-hat
+
+bias^2 + var + whitenoise 
+
+
+Model:
+1. Simple: Bias too high - cannot explain the training data - training error high
+2. Just right - works better on new data 
+3. Complex: Varaiance too high - bias low - memorize the training data - training error almost zero 
+
+
+The work of model selection:
+Find the just right model and predict error on new unseen data
+
+Work plan for model selection:
+1. Build model on historical data
+2. Test on new data -- performance measurement 
+
+
+Data split:
+1. Training :For building model
+2. Test:     For predicting errors on future model --- (assumption - we know the underlying true distribution of the training data )
+             2.1 - helps in building a robust model 
+
+
+K-fold cross validation:
+
+Folds: 1 2 3 4 5
+
+Build model on 1 2 3 4 Test on 5
+Build model on 2 3 4 5 Test on 1
+Build model on 3 4 5 1 Test on 2
+...
+...
+
+
+Regression - RMSE
+
+classification: More robust accuracy metric to make k-fold cross validation more robust 
+
+2 class classification
+
+60% correct -- i could identify 60% correctly
+
+A 
+B 
+
+how many we could classify correctly
+how many we failed to classify correctly 
+
+
+
+
+Word1-Word2-Word3
+
+
+
+Word1 - True/False - could we classify correctly?
+Word2 - Postive/negative - what is the predicted class?
+Word3 - rate.
+
+
+
+
+
